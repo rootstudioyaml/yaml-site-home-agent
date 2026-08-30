@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@700;900&family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet" />
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{width:1200px;height:630px;overflow:hidden;background:#161311;color:#f2ece5;
+       font-family:"Noto Sans KR",sans-serif;position:relative}
+  .photo{position:absolute;inset:0;background:url('PHOTO') center 58%/cover no-repeat}
+  .photo::after{content:"";position:absolute;inset:0;
+    background:linear-gradient(100deg,rgba(16,13,11,.97) 0%,rgba(16,13,11,.93) 44%,rgba(16,13,11,.55) 68%,rgba(16,13,11,.32) 100%),
+               linear-gradient(180deg,rgba(16,13,11,.55) 0%,rgba(16,13,11,.2) 45%,rgba(16,13,11,.9) 100%)}
+  .inner{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;
+         justify-content:space-between;padding:62px 68px}
+  .brand{display:flex;align-items:center;gap:20px}
+  .mark{width:74px;height:74px;flex:none}
+  .wordmark b{display:block;font-family:"Oswald","Gothic A1",sans-serif;font-weight:900;font-size:38px;letter-spacing:.01em;line-height:1.1}
+  .wordmark span{display:block;font-size:14px;font-weight:700;letter-spacing:.34em;color:#c89a6a;margin-top:7px}
+  h1{font-family:"Oswald","Gothic A1",sans-serif;font-weight:900;font-size:66px;line-height:1.24;letter-spacing:-.025em;
+     text-shadow:0 4px 34px rgba(0,0,0,.6)}
+  h1 em{font-style:normal;color:#e0c1a0}
+  .tags{display:flex;gap:11px;margin-top:26px;flex-wrap:wrap}
+  .tags span{border:1px solid rgba(233,220,205,.26);border-radius:999px;padding:9px 19px;font-size:18px;color:#cfc2b1}
+  .foot{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;
+        border-top:1px solid rgba(233,220,205,.16);padding-top:24px}
+  .tel{font-family:"Oswald","Gothic A1",sans-serif;font-weight:900;font-size:44px;color:#e0c1a0;letter-spacing:-.01em;line-height:1}
+  .tel small{display:block;font-family:"Noto Sans KR",sans-serif;font-size:15px;font-weight:500;
+             letter-spacing:.14em;color:#b9ab98;margin-bottom:11px}
+  .meta{text-align:right;font-size:18px;color:#b9ab98;line-height:1.7}
+  .meta b{color:#e0c1a0;font-weight:700}
+</style>
+</head>
+<body>
+<div class="photo"></div>
+<div class="inner">
+  <div class="brand">
+    <svg class="mark" viewBox="0 0 64 64" aria-hidden="true">
+      <rect width="64" height="64" rx="13" fill="#1e1814" stroke="#c89a6a" stroke-width="1.4"/>
+      <path d="M20 16h8v22.5c0 5.8-3.7 9.5-9.6 9.5-3.1 0-5.6-.9-7.4-2.4l2.9-6c1 .9 2.2 1.4 3.5 1.4 1.7 0 2.6-1 2.6-3.1V16z" fill="#c89a6a"/>
+      <path d="M36 16h8v12h8V16h8v32h-8V35h-8v13h-8V16z" fill="#f2ece5"/>
+    </svg>
+    <div class="wordmark"><b>제이하우징</b><span>INTERIOR &amp; CARPENTRY</span></div>
+  </div>
+
+  <div>
+    <h1>19년 경력 목수가<br /><em>상담부터 마감까지 직접</em> 시공합니다</h1>
+    <div class="tags"><span>아치가벽</span><span>히든도어</span><span>우물천장</span><span>무문선</span><span>웨인스코팅</span></div>
+  </div>
+
+  <div class="foot">
+    <div class="tel"><small>상담 문의</small>010-4722-4504</div>
+    <div class="meta">서울 · 경기 · 인천 수도권 전 지역 시공<br /><b>숨고 평점 5.0</b> · 리뷰 78건 · 시공 5,500건 이상</div>
+  </div>
+</div>
+</body>
+</html>
