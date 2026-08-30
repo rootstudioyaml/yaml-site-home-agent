@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://j-housing.co.kr/sitemap.xml
