@@ -16,14 +16,14 @@
 <meta property="og:title" content="제이하우징 · 인테리어 목공 전문" />
 <meta property="og:description" content="19년 경력 목수가 상담부터 마감까지 직접 시공합니다. 아치가벽, 히든도어, 우물천장, 무문선. 수도권 전 지역." />
 <meta property="og:url" content="https://rootstudioyaml.github.io/yaml-site-home-agent/" />
-<meta property="og:image" content="https://rootstudioyaml.github.io/yaml-site-home-agent/assets/og-v2.jpg" />
+<meta property="og:image" content="https://rootstudioyaml.github.io/yaml-site-home-agent/assets/og-v3.jpg" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:locale" content="ko_KR" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="제이하우징 · 인테리어 목공 전문" />
 <meta name="twitter:description" content="19년 경력 목수가 상담부터 마감까지 직접 시공합니다." />
-<meta name="twitter:image" content="https://rootstudioyaml.github.io/yaml-site-home-agent/assets/og-v2.jpg" />
+<meta name="twitter:image" content="https://rootstudioyaml.github.io/yaml-site-home-agent/assets/og-v3.jpg" />
 
 <script type="application/ld+json">
 {
@@ -35,7 +35,7 @@
   "description": "19년 경력의 대표 목수가 직접 시공하는 인테리어 목공 전문 업체입니다. 가벽, 아치가벽, 히든도어, 우물천장, 무문선, 웨인스코팅 등 실내 목공 전반을 담당합니다.",
   "url": "https://rootstudioyaml.github.io/yaml-site-home-agent/",
   "telephone": "+82-10-4722-4504",
-  "image": "https://rootstudioyaml.github.io/yaml-site-home-agent/assets/og-v2.jpg",
+  "image": "https://rootstudioyaml.github.io/yaml-site-home-agent/assets/og-v3.jpg",
   "logo": "https://rootstudioyaml.github.io/yaml-site-home-agent/assets/favicon.svg",
   "priceRange": "₩₩",
   "address": {
@@ -214,8 +214,10 @@
   .ba-item img{width:100%;aspect-ratio:4/3;object-fit:cover;transition:transform .6s var(--ease),filter .6s var(--ease)}
   .ba-row:hover .ba-item img{transform:scale(1.04);filter:brightness(1.06)}
   .ba-item.tall img{aspect-ratio:3/4;object-position:center 32%}
-  .ba-item .tag{position:absolute;top:0;left:0;z-index:3;font-size:.62rem;font-weight:700;letter-spacing:.26em;padding:9px 16px;background:rgba(18,15,13,.86);color:var(--wood-light)}
-  .ba-item.after .tag{background:var(--wood);color:#1a1411}
+  .ba-item .tag{position:absolute;top:14px;left:14px;z-index:3;font-family:var(--display);font-size:.86rem;font-weight:700;
+    letter-spacing:.02em;padding:8px 18px;border-radius:999px;background:rgba(18,15,13,.82);backdrop-filter:blur(6px);
+    border:1px solid rgba(233,220,205,.22);color:var(--wood-light)}
+  .ba-item.after .tag{background:var(--wood);color:#1a1411;border-color:var(--wood)}
   .ba-cap{grid-column:1/-1;display:grid;grid-template-columns:repeat(12,1fr);gap:clamp(14px,2vw,28px);padding-top:20px;border-top:1px solid var(--line-soft);margin-top:6px}
   .ba-cap b{grid-column:1/5;font-family:var(--display);font-weight:600;font-size:1.15rem;color:var(--wood-light)}
   .ba-cap span{grid-column:6/12;font-size:.9rem;color:var(--ink-dim)}
@@ -225,8 +227,11 @@
   .shot{position:relative;display:block;overflow:hidden;background:#241e19}
   .shot img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease),filter .6s var(--ease)}
   .shot:hover img{transform:scale(1.04);filter:brightness(1.06)}
-  .shot figcaption{display:flex;justify-content:space-between;gap:16px;align-items:baseline;margin-top:14px;font-size:.85rem;color:var(--ink-dim)}
-  .shot figcaption em{font-style:normal;font-size:.66rem;letter-spacing:.24em;color:var(--wood)}
+  .pf figcaption{display:flex;justify-content:space-between;gap:18px;align-items:baseline;flex-wrap:wrap;
+    margin-top:18px;padding-top:14px;border-top:1px solid var(--line-soft)}
+  .pf figcaption span{font-family:var(--display);font-weight:700;font-size:1.02rem;letter-spacing:-.005em;color:var(--ink)}
+  .pf figcaption em{font-style:normal;font-family:var(--sans);font-size:.62rem;font-weight:700;
+    letter-spacing:.28em;text-transform:uppercase;color:var(--wood);flex:none}
   .pf .big{grid-column:1/13}
   .pf .big img{aspect-ratio:21/9}
   .pf .half{grid-column:span 6}
