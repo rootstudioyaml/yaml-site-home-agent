@@ -81,19 +81,21 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet" />
 <style>
   :root{
     --bg:#161311; --bg2:#1c1815; --panel:#221d19;
     --wood:#c89a6a; --wood-light:#e0c1a0; --ink:#f2ece5; --ink-dim:#b9ab98;
     --line:rgba(233,220,205,.12); --line-soft:rgba(233,220,205,.07);
     --ease:cubic-bezier(0.16,1,0.3,1);
-    --serif:"Noto Serif KR","Apple SD Gothic Neo",serif;
+    --serif:"Noto Serif KR",Georgia,"Times New Roman",serif;
+    --sans:"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
     --gut:clamp(20px,5vw,72px);
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-  body{background:var(--bg);color:var(--ink);font-family:"Pretendard","Apple SD Gothic Neo","Noto Sans KR",sans-serif;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:400;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  input,textarea,button,select{font-family:inherit}
   img{display:block;max-width:100%}
   a{color:inherit;text-decoration:none}
   a,button,label[for],summary{cursor:pointer}
@@ -108,7 +110,7 @@
   .g12{display:grid;grid-template-columns:repeat(12,1fr);gap:clamp(16px,2.4vw,32px)}
 
   /* ---------- TYPE ---------- */
-  .eyebrow{font-family:inherit;font-size:.68rem;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--wood)}
+  .eyebrow{font-family:var(--sans);font-size:.68rem;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--wood)}
   h2{font-family:var(--serif);font-weight:900;font-size:clamp(1.9rem,4vw,3.1rem);line-height:1.22;letter-spacing:-.01em}
   h3{font-family:var(--serif);font-weight:600}
   .rule{height:1px;background:var(--line);border:0;width:100%}
@@ -119,7 +121,7 @@
   header.solid{background:rgba(18,15,13,.92);backdrop-filter:blur(14px);border-bottom-color:var(--line-soft)}
   .nav{display:flex;align-items:center;justify-content:space-between;height:78px;gap:20px}
   .logo{font-family:var(--serif);font-weight:900;font-size:1.15rem;letter-spacing:.02em;color:var(--ink);flex:none;line-height:1.2}
-  .logo small{display:block;font-family:inherit;font-size:.55rem;font-weight:700;color:var(--wood);letter-spacing:.3em;margin-top:3px}
+  .logo small{display:block;font-family:var(--sans);font-size:.55rem;font-weight:700;color:var(--wood);letter-spacing:.3em;margin-top:3px}
   .nav ul{display:flex;gap:clamp(18px,2.2vw,34px);list-style:none;font-size:.82rem;letter-spacing:.06em;color:var(--ink-dim)}
   .nav ul a{position:relative;padding-bottom:3px;transition:color .3s var(--ease)}
   .nav ul a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--wood);transition:width .45s var(--ease)}
