@@ -615,10 +615,10 @@
       <path d="M6.3 3.5h3l1.6 4-2 1.4a12 12 0 006.2 6.2l1.4-2 4 1.6v3c0 1-.8 1.8-1.8 1.7C10.9 18.8 5.2 13.1 4.6 5.3c-.1-1 .7-1.8 1.7-1.8z" stroke-linejoin="round"/>
     </svg>전화 상담
   </a>
-  <a href="sms:01047224504">
+  <a href="https://www.soomgo.com/profile/users/12052365" target="_blank" rel="noopener">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
-      <path d="M3.5 5.5h17v11h-9.5L6 20.2V16.5H3.5z" stroke-linejoin="round"/>
-    </svg>문자 문의
+      <path d="M12 3.4l2.7 5.4 6 .9-4.3 4.2 1 6-5.4-2.8-5.4 2.8 1-6L3.3 9.7l6-.9z" stroke-linejoin="round"/>
+    </svg>숨고 문의
   </a>
   <a href="https://www.instagram.com/carpenter_juns" target="_blank" rel="noopener">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
@@ -665,10 +665,11 @@
     a.addEventListener('click', function(){ mnav.checked = false; });
   });
 
-  /* 문의 폼. WEB3FORMS_KEY 를 발급받아 넣으면 이메일로 전송되고,
-     비어 있으면 문자 앱으로 내용을 채워 넘긴다. */
+  /* 문의 폼. WEB3FORMS_KEY 를 발급받아 넣으면 이메일로 전송된다.
+     키가 비어 있으면 폼을 숨겨서 접수되지 않는 폼이 노출되지 않게 한다. */
   var WEB3FORMS_KEY = '';
   var form = document.getElementById('askForm');
+  if(form && !WEB3FORMS_KEY){ form.remove(); form = null; }
   if(form){
     var msg = document.getElementById('askMsg');
     var btn = form.querySelector('.send');
@@ -681,12 +682,6 @@
       if(!phone || !work){
         msg.className = 'msg err';
         msg.textContent = '연락처와 원하시는 작업을 모두 적어 주세요.';
-        return;
-      }
-      var body = '[홈페이지 상담] 연락처 ' + phone + ' / 작업 ' + work;
-      if(!WEB3FORMS_KEY){
-        msg.textContent = '문자 앱으로 연결합니다.';
-        location.href = 'sms:01047224504' + (/iPhone|iPad|Mac/.test(navigator.userAgent) ? '&' : '?') + 'body=' + encodeURIComponent(body);
         return;
       }
       btn.disabled = true;
