@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>한강뷰 프리미엄 부동산 — 루미나 리얼티</title>
+<meta name="description" content="서울 강남·용산 프리미엄 매물 큐레이션. 15년차 전문 컨설턴트가 직접 매칭." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: { sans: ['Pretendard', 'system-ui', 'sans-serif'] },
+      colors: {
+        ink: '#0A0A0B',
+        panel: '#111114',
+        line: '#1E1E22',
+        mute: '#8A8A93',
+        gold: '#C8A872',
+      },
+    },
+  },
+};
+</script>
+<style>
+html { scroll-behavior: smooth; }
+body { background: #0A0A0B; color: #EDEDF0; font-family: 'Pretendard', sans-serif; -webkit-font-smoothing: antialiased; }
+.grain { background-image: radial-gradient(rgba(255,255,255,0.04) 1px, transparent 1px); background-size: 4px 4px; }
+.glow { background: radial-gradient(60% 50% at 50% 0%, rgba(200,168,114,0.18) 0%, rgba(200,168,114,0) 70%); }
+.card-img { background-size: cover; background-position: center; }
+.fade-up { opacity: 0; transform: translateY(20px); transition: all .8s ease; }
+.fade-up.in { opacity: 1; transform: translateY(0); }
+.marquee { animation: scroll 40s linear infinite; }
+@keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.hero-img { background-image: url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=2400&q=80'); }
+.p1 { background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&q=80'); }
+.p2 { background-image: url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1600&q=80'); }
+.p3 { background-image: url('https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1600&q=80'); }
+.p4 { background-image: url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1600&q=80'); }
+.p5 { background-image: url('https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1600&q=80'); }
+.p6 { background-image: url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1600&q=80'); }
+</style>
+</head>
+<body class="font-sans">
+
+<!-- NAV -->
+<header class="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-ink/70 border-b border-line">
+  <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+    <a href="#" class="flex items-center gap-2">
+      <div class="w-7 h-7 rounded-sm bg-gold flex items-center justify-center text-ink font-bold">L</div>
+      <span class="font-semibold tracking-tight">LUMINA REALTY</span>
+    </a>
+    <nav class="hidden md:flex items-center gap-8 text-sm text-mute">
+      <a href="#listings" class="hover:text-white transition">매물</a>
+      <a href="#process" class="hover:text-white transition">프로세스</a>
+      <a href="#consultant" class="hover:text-white transition">컨설턴트</a>
+      <a href="#contact" class="hover:text-white transition">상담</a>
+    </nav>
+    <a href="#contact" class="px-4 py-2 rounded-full bg-white text-ink text-sm font-medium hover:bg-gold transition">무료 상담</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="relative pt-32 pb-24 overflow-hidden">
+  <div class="absolute inset-0 hero-img bg-cover bg-center opacity-30"></div>
+  <div class="absolute inset-0 bg-gradient-to-b from-ink/40 via-ink/80 to-ink"></div>
+  <div class="absolute inset-x-0 top-0 h-[60vh] glow"></div>
+  <div class="absolute inset-0 grain opacity-50"></div>
+
+  <div class="relative max-w-7xl mx-auto px-6">
+    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-line bg-panel/60 text-xs text-mute mb-8">
+      <span class="w-1.5 h-1.5 rounded-full bg-gold"></span>
+      2026 봄, 강남·용산 신규 매물 38건 업데이트
+    </div>
+    <h1 class="text-5xl md:text-7xl font-bold tracking-tight leading-[1.05] max-w-4xl">
+      평생 살 집을<br/>
+      <span class="text-gold">단 하나의 매물</span>로<br/>
+      만나는 방법.
+    </h1>
+    <p class="mt-8 max-w-xl text-lg text-mute leading-relaxed">
+      루미나 리얼티는 강남·용산·성수 프리미엄 부동산만 큐레이션합니다.
+      15년차 자산관리 전문가가 직접 매칭하고, 비공개 매물까지 안내드립니다.
+    </p>
+    <div class="mt-10 flex flex-wrap gap-3">
+      <a href="#listings" class="px-6 py-3.5 rounded-full bg-gold text-ink font-semibold hover:bg-white transition">매물 둘러보기 →</a>
+      <a href="#contact" class="px-6 py-3.5 rounded-full border border-line bg-panel/60 hover:bg-panel transition">1:1 비공개 상담</a>
+    </div>
+    <div class="mt-20 grid grid-cols-3 gap-8 max-w-2xl">
+      <div>
+        <div class="text-3xl md:text-4xl font-bold">1,247</div>
+        <div class="text-sm text-mute mt-1">누적 거래</div>
+      </div>
+      <div>
+        <div class="text-3xl md:text-4xl font-bold">98<span class="text-gold">%</span></div>
+        <div class="text-sm text-mute mt-1">고객 재의뢰율</div>
+      </div>
+      <div>
+        <div class="text-3xl md:text-4xl font-bold">15<span class="text-mute text-2xl">년</span></div>
+        <div class="text-sm text-mute mt-1">업력</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOGO MARQUEE -->
+<section class="border-y border-line py-8 overflow-hidden bg-panel/40">
+  <div class="text-center text-xs text-mute uppercase tracking-[0.3em] mb-6">제휴 금융·법무 파트너</div>
+  <div class="flex marquee whitespace-nowrap gap-16 text-mute/70 text-2xl font-semibold">
+    <span>KB국민은행</span><span>•</span>
+    <span>하나은행 PB</span><span>•</span>
+    <span>신한 프리미어</span><span>•</span>
+    <span>김앤장 법률</span><span>•</span>
+    <span>삼정KPMG</span><span>•</span>
+    <span>우리 PB</span><span>•</span>
+    <span>KB국민은행</span><span>•</span>
+    <span>하나은행 PB</span><span>•</span>
+    <span>신한 프리미어</span><span>•</span>
+    <span>김앤장 법률</span><span>•</span>
+    <span>삼정KPMG</span><span>•</span>
+    <span>우리 PB</span><span>•</span>
+  </div>
+</section>
+
+<!-- LISTINGS -->
+<section id="listings" class="py-24 max-w-7xl mx-auto px-6">
+  <div class="flex items-end justify-between mb-12 flex-wrap gap-4">
+    <div>
+      <div class="text-sm text-gold uppercase tracking-[0.2em] mb-3">FEATURED LISTINGS</div>
+      <h2 class="text-4xl md:text-5xl font-bold tracking-tight">이번 주 큐레이션</h2>
+    </div>
+    <div class="flex gap-2 text-sm">
+      <button class="px-4 py-2 rounded-full bg-white text-ink">전체</button>
+      <button class="px-4 py-2 rounded-full border border-line text-mute hover:text-white">아파트</button>
+      <button class="px-4 py-2 rounded-full border border-line text-mute hover:text-white">단독주택</button>
+      <button class="px-4 py-2 rounded-full border border-line text-mute hover:text-white">상가·빌딩</button>
+    </div>
+  </div>
+
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <!-- card 1 -->
+    <article class="group relative rounded-2xl overflow-hidden border border-line bg-panel hover:border-gold/40 transition">
+      <div class="card-img p1 aspect-[4/5] relative">
+        <div class="absolute top-4 left-4 px-3 py-1 rounded-full bg-ink/80 backdrop-blur text-xs">비공개 매물</div>
+        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink to-transparent p-6">
+          <div class="text-xs text-gold mb-2">강남구 압구정동</div>
+          <h3 class="text-2xl font-bold">한강뷰 펜트하우스</h3>
+          <div class="flex items-center justify-between mt-4">
+            <div class="text-xl font-semibold">매매 <span class="text-gold">82억</span></div>
+            <div class="text-xs text-mute">전용 198㎡ · 4층</div>
+          </div>
+        </div>
+      </div>
+    </article>
+    <!-- card 2 -->
+    <article class="group relative rounded-2xl overflow-hidden border border-line bg-panel hover:border-gold/40 transition">
+      <div class="card-img p2 aspect-[4/5] relative">
+        <div class="absolute top-4 left-4 px-3 py-1 rounded-full bg-gold/90 text-ink text-xs font-medium">신규</div>
+        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink to-transparent p-6">
+          <div class="text-xs text-gold mb-2">용산구 한남동</div>
+          <h3 class="text-2xl font-bold">한남더힐 4베이</h3>
+          <div class="flex items-center justify-between mt-4">
+            <div class="text-xl font-semibold">매매 <span class="text-gold">68억</span></div>
+            <div class="text-xs text-mute">전용 240㎡ · 7층</div>
+          </div>
+        </div>
+      </div>
+    </article>
+    <!-- card 3 -->
+    <article class="group relative rounded-2xl overflow-hidden border border-line bg-panel hover:border-gold/40 transition">
+      <div class="card-img p3 aspect-[4/5] relative">
+        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink to-transparent p-6">
+          <div class="text-xs text-gold mb-2">성동구 성수동</div>
+          <h3 class="text-2xl font-bold">갤러리아 포레</h3>
+          <div class="flex items-center justify-between mt-4">
+            <div class="text-xl font-semibold">매매 <span class="text-gold">54억</span></div>
+            <div class="text-xs text-mute">전용 217㎡ · 30층</div>
+          </div>
+        </div>
+      </div>
+    </article>
+    <!-- card 4 -->
+    <article class="group relative rounded-2xl overflow-hidden border border-line bg-panel hover:border-gold/40 transition">
+      <div class="card-img p4 aspect-[4/5] relative">
+        <div class="absolute top-4 left-4 px-3 py-1 rounded-full bg-ink/80 backdrop-blur text-xs">비공개 매물</div>
+        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink to-transparent p-6">
+          <div class="text-xs text-gold mb-2">서초구 반포동</div>
+          <h3 class="text-2xl font-bold">아크로리버파크</h3>
+          <div class="flex items-center justify-between mt-4">
+            <div class="text-xl font-semibold">매매 <span class="text-gold">76억</span></div>
+            <div class="text-xs text-mute">전용 178㎡ · 12층</div>
+          </div>
+        </div>
+      </div>
+    </article>
+    <!-- card 5 -->
+    <article class="group relative rounded-2xl overflow-hidden border border-line bg-panel hover:border-gold/40 transition">
+      <div class="card-img p5 aspect-[4/5] relative">
+        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink to-transparent p-6">
+          <div class="text-xs text-gold mb-2">강남구 청담동</div>
+          <h3 class="text-2xl font-bold">상지리츠빌 카일룸</h3>
+          <div class="flex items-center justify-between mt-4">
+            <div class="text-xl font-semibold">매매 <span class="text-gold">49억</span></div>
+            <div class="text-xs text-mute">전용 154㎡ · 6층</div>
+          </div>
+        </div>
+      </div>
+    </article>
+    <!-- card 6 -->
+    <article class="group relative rounded-2xl overflow-hidden border border-line bg-panel hover:border-gold/40 transition">
+      <div class="card-img p6 aspect-[4/5] relative">
+        <div class="absolute top-4 left-4 px-3 py-1 rounded-full bg-gold/90 text-ink text-xs font-medium">신규</div>
+        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink to-transparent p-6">
+          <div class="text-xs text-gold mb-2">용산구 이태원동</div>
+          <h3 class="text-2xl font-bold">UN빌리지 단독주택</h3>
+          <div class="flex items-center justify-between mt-4">
+            <div class="text-xl font-semibold">매매 <span class="text-gold">125억</span></div>
+            <div class="text-xs text-mute">대지 412㎡ · 지상3층</div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <div class="mt-12 text-center">
+    <a href="#contact" class="inline-flex items-center gap-2 text-gold hover:text-white transition">
+      비공개 매물 38건 더 보기 <span>→</span>
+    </a>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process" class="py-24 border-y border-line bg-panel/30">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="max-w-2xl mb-16">
+      <div class="text-sm text-gold uppercase tracking-[0.2em] mb-3">PROCESS</div>
+      <h2 class="text-4xl md:text-5xl font-bold tracking-tight">매칭부터 잔금까지, 한 사람의 책임.</h2>
+      <p class="mt-6 text-mute leading-relaxed">
+        루미나의 컨설턴트는 평균 12년차입니다. 매물 추천만 하고 사라지지 않습니다.
+        세무·법무·금융 파트너와 함께 잔금 치를 때까지 함께합니다.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-4 gap-px bg-line rounded-2xl overflow-hidden">
+      <div class="bg-ink p-8">
+        <div class="text-gold text-sm font-mono mb-4">01</div>
+        <h3 class="text-xl font-semibold mb-3">비공개 상담</h3>
+        <p class="text-sm text-mute leading-relaxed">예산·라이프스타일·자산구조 청취. NDA 후 비공개 매물 풀 오픈.</p>
+      </div>
+      <div class="bg-ink p-8">
+        <div class="text-gold text-sm font-mono mb-4">02</div>
+        <h3 class="text-xl font-semibold mb-3">큐레이션</h3>
+        <p class="text-sm text-mute leading-relaxed">조건에 맞는 매물 3~5건 추천. 시세·미래가치·세금 시뮬레이션 포함.</p>
+      </div>
+      <div class="bg-ink p-8">
+        <div class="text-gold text-sm font-mono mb-4">03</div>
+        <h3 class="text-xl font-semibold mb-3">현장 임장</h3>
+        <p class="text-sm text-mute leading-relaxed">직접 동행. 햇빛·소음·관리 상태 등 사진으로 안 보이는 부분 검증.</p>
+      </div>
+      <div class="bg-ink p-8">
+        <div class="text-gold text-sm font-mono mb-4">04</div>
+        <h3 class="text-xl font-semibold mb-3">계약·잔금</h3>
+        <p class="text-sm text-mute leading-relaxed">법무·세무·대출 파트너 연결. 잔금 후 1년간 사후관리.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONSULTANT -->
+<section id="consultant" class="py-24 max-w-7xl mx-auto px-6">
+  <div class="grid md:grid-cols-2 gap-16 items-center">
+    <div class="aspect-[4/5] rounded-2xl overflow-hidden border border-line" style="background: url('https://images.unsplash.com/photo-1560250097-0b93528c311a?w=1200&q=80') center/cover;"></div>
+    <div>
+      <div class="text-sm text-gold uppercase tracking-[0.2em] mb-3">YOUR CONSULTANT</div>
+      <h2 class="text-4xl md:text-5xl font-bold tracking-tight">김도현 <span class="text-mute font-normal text-2xl">수석 컨설턴트</span></h2>
+      <p class="mt-6 text-mute leading-relaxed">
+        前 KB국민은행 PB센터 자산관리팀, 現 루미나 리얼티 파트너.
+        지난 10년간 강남·용산 프리미엄 매물 412건을 매칭했습니다.
+        평균 거래가 38억, 재의뢰율 98%.
+      </p>
+      <div class="mt-8 grid grid-cols-2 gap-6 max-w-md">
+        <div class="border-l-2 border-gold pl-4">
+          <div class="text-2xl font-bold">412</div>
+          <div class="text-xs text-mute mt-1">개인 거래 건수</div>
+        </div>
+        <div class="border-l-2 border-gold pl-4">
+          <div class="text-2xl font-bold">38<span class="text-mute text-base">억</span></div>
+          <div class="text-xs text-mute mt-1">평균 거래가</div>
+        </div>
+      </div>
+      <a href="#contact" class="inline-block mt-10 px-6 py-3 rounded-full bg-white text-ink font-medium hover:bg-gold transition">컨설턴트와 통화하기</a>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIAL -->
+<section class="py-24 border-y border-line bg-panel/30">
+  <div class="max-w-4xl mx-auto px-6 text-center">
+    <div class="text-gold text-3xl mb-8">★★★★★</div>
+    <p class="text-2xl md:text-3xl font-medium leading-relaxed">
+      "비공개 매물 두 건만 봤을 뿐인데 평생 살 집을 만났습니다.
+      <span class="text-mute">매매가 협상부터 양도세 시뮬레이션까지 한 사람이 끝까지 책임지는 경험은 처음이었어요.</span>"
+    </p>
+    <div class="mt-10 text-sm text-mute">
+      이○○ 대표 · IT 스타트업 · 압구정 펜트하우스 매매 (2025)
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-24 max-w-3xl mx-auto px-6">
+  <div class="text-center mb-12">
+    <div class="text-sm text-gold uppercase tracking-[0.2em] mb-3">CONTACT</div>
+    <h2 class="text-4xl md:text-5xl font-bold tracking-tight">비공개 상담 신청</h2>
+    <p class="mt-6 text-mute">24시간 안에 컨설턴트가 직접 연락드립니다. NDA 후 비공개 매물 풀이 오픈됩니다.</p>
+  </div>
+  <form class="space-y-4 p-8 rounded-2xl border border-line bg-panel/50">
+    <div class="grid md:grid-cols-2 gap-4">
+      <input type="text" placeholder="성함" class="w-full px-4 py-3.5 rounded-lg bg-ink border border-line focus:border-gold outline-none transition" />
+      <input type="tel" placeholder="연락처" class="w-full px-4 py-3.5 rounded-lg bg-ink border border-line focus:border-gold outline-none transition" />
+    </div>
+    <select class="w-full px-4 py-3.5 rounded-lg bg-ink border border-line focus:border-gold outline-none transition text-mute">
+      <option>관심 지역 선택</option>
+      <option>압구정 / 청담</option>
+      <option>한남 / 이태원</option>
+      <option>반포 / 잠원</option>
+      <option>성수 / 서울숲</option>
+    </select>
+    <select class="w-full px-4 py-3.5 rounded-lg bg-ink border border-line focus:border-gold outline-none transition text-mute">
+      <option>예산 범위</option>
+      <option>30억 ~ 50억</option>
+      <option>50억 ~ 80억</option>
+      <option>80억 ~ 120억</option>
+      <option>120억 이상</option>
+    </select>
+    <textarea rows="4" placeholder="요청사항 (선택)" class="w-full px-4 py-3.5 rounded-lg bg-ink border border-line focus:border-gold outline-none transition resize-none"></textarea>
+    <button type="button" class="w-full py-4 rounded-lg bg-gold text-ink font-bold hover:bg-white transition">상담 신청하기</button>
+    <p class="text-xs text-mute text-center pt-2">제출 시 개인정보 처리방침에 동의한 것으로 간주됩니다.</p>
+  </form>
+</section>
+
+<!-- FOOTER -->
+<footer class="border-t border-line py-12 mt-12">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-8 text-sm">
+    <div>
+      <div class="flex items-center gap-2 mb-4">
+        <div class="w-7 h-7 rounded-sm bg-gold flex items-center justify-center text-ink font-bold">L</div>
+        <span class="font-semibold">LUMINA REALTY</span>
+      </div>
+      <p class="text-mute leading-relaxed text-xs">
+        서울특별시 강남구 압구정로 312<br/>
+        대표 김도현 · 사업자 123-45-67890<br/>
+        중개등록 제2018-강남-1234호
+      </p>
+    </div>
+    <div>
+      <div class="text-mute mb-3 text-xs uppercase tracking-wider">SERVICE</div>
+      <ul class="space-y-2 text-mute">
+        <li><a href="#" class="hover:text-white">매물 큐레이션</a></li>
+        <li><a href="#" class="hover:text-white">자산관리 컨설팅</a></li>
+        <li><a href="#" class="hover:text-white">법인 부동산</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="text-mute mb-3 text-xs uppercase tracking-wider">CONTACT</div>
+      <ul class="space-y-2 text-mute">
+        <li>02-540-1234</li>
+        <li>contact@luminarealty.kr</li>
+        <li>평일 09:00 - 21:00</li>
+      </ul>
+    </div>
+    <div>
+      <div class="text-mute mb-3 text-xs uppercase tracking-wider">FOLLOW</div>
+      <ul class="space-y-2 text-mute">
+        <li><a href="#" class="hover:text-white">Instagram</a></li>
+        <li><a href="#" class="hover:text-white">YouTube</a></li>
+        <li><a href="#" class="hover:text-white">KakaoTalk Channel</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto px-6 mt-12 pt-8 border-t border-line text-xs text-mute flex justify-between flex-wrap gap-4">
+    <div>© 2026 Lumina Realty. All rights reserved.</div>
+    <div class="flex gap-6">
+      <a href="#" class="hover:text-white">개인정보처리방침</a>
+      <a href="#" class="hover:text-white">중개사무소 정보</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+const io = new IntersectionObserver((es) => es.forEach(e => e.isIntersecting && e.target.classList.add('in')), { threshold: 0.1 });
+document.querySelectorAll('.fade-up').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
