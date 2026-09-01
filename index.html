@@ -80,6 +80,63 @@
   }
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://j-housing.co.kr/#faq",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "상담부터 시공까지 어떻게 진행되나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "상담 및 문의 → 현장 방문·실측 → 견적 안내와 일정 협의 → 시공 → 마감 확인·정리 순으로 진행합니다. 현장을 직접 보고 실측한 뒤 시공 가능 여부와 작업 방향을 안내드립니다. 상담부터 시공까지 대표 목수가 직접 진행합니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "견적은 어떻게 산정되나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "작업 시간, 자재 비용, 기술 난이도, 현장 환경 네 가지를 기준으로 산정합니다. 전화만으로 정확한 금액을 말씀드리기는 어렵습니다. 현장을 확인한 뒤 확정 견적을 드립니다. 실측 없이 낮은 금액을 부르고 공사 중에 올리는 방식은 쓰지 않습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "반셀프 인테리어인데 목공 공정만 맡길 수 있나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "가능합니다. 실제로 반셀프로 진행하시는 분들의 목공 공정을 많이 맡고 있습니다. 목공은 도배·전기·마루 같은 다른 공정과 순서가 맞물립니다. 인테리어가 처음이시면 공정 순서와 준비할 것도 함께 상담해 드립니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "시공 중에 추가 비용이 생기나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "현장을 실측하고 견적을 확정하기 때문에 시공 중 금액이 바뀌는 일은 거의 없습니다. 철거 후에야 드러나는 구조 문제처럼 미리 알 수 없는 상황이 생기면, 작업을 진행하기 전에 먼저 알려드리고 협의한 뒤에 처리합니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "A/S와 취소·환불 규정은 어떻게 되나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "시공 완료 후 1개월 동안 A/S를 보증합니다. 문제가 생기면 연락 주시면 확인하고 처리해 드립니다. 예약 취소와 환불은 작업 일정 기준 7일 전까지 가능합니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "어떤 목공 작업을 하나요? 시공 가능 지역은요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "가벽, 아치가벽과 라운딩 벽체, 슬라이딩 도어와 히든도어, 무문선·9mm 문선, 우물천장과 천장 목공, 웨인스코팅 몰딩, 템바보드·루버, TV 매립과 제작 벤치까지 실내 목공 전반을 시공합니다. 아파트뿐 아니라 상가, 병원, 사무실 같은 상업 공간도 진행합니다. 서울·경기·인천 수도권 전 지역에서 시공합니다."
+      }
+    }
+  ]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@500;700;800;900&family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet" />
@@ -260,6 +317,25 @@
   blockquote p{font-family:var(--display);font-weight:600;font-size:clamp(1.05rem,1.7vw,1.45rem);line-height:1.6;color:var(--ink)}
   blockquote footer{margin-top:16px;font-size:.7rem;letter-spacing:.22em;color:var(--wood)}
 
+  /* ---------- FAQ ---------- */
+  .faq{display:grid}
+  .faq details{border-top:1px solid var(--line)}
+  .faq details:last-child{border-bottom:1px solid var(--line)}
+  .faq summary{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;padding:22px 0;
+    font-family:var(--display);font-weight:600;font-size:clamp(1rem,1.5vw,1.2rem);line-height:1.5;color:var(--ink);
+    list-style:none;transition:color .3s var(--ease)}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary:hover{color:var(--wood-light)}
+  /* +/− 는 글자가 아니라 두 개의 선으로 그린다. 폰트에 따라 기호 높이가 달라지는 문제가 없다. */
+  .faq summary i{position:relative;flex:none;width:14px;height:14px;margin-top:.36em}
+  .faq summary i::before,.faq summary i::after{content:"";position:absolute;left:0;top:6px;width:14px;height:2px;background:var(--wood)}
+  .faq summary i::after{transform:rotate(90deg);transition:transform .35s var(--ease)}
+  .faq details[open] summary i::after{transform:rotate(0deg)}
+  .faq details[open] summary{color:var(--wood-light)}
+  .faq .a{padding:0 0 26px;color:var(--ink-dim);font-size:.94rem;line-height:1.85;max-width:62ch}
+  .faq .a p + p{margin-top:12px}
+  .faq .a b{color:var(--ink);font-weight:500}
+
   /* ---------- CONTACT ---------- */
   .contact{background:var(--bg2);border-top:1px solid var(--line-soft)}
   .contact .who{display:flex;gap:22px;align-items:center;margin-bottom:28px}
@@ -387,6 +463,7 @@
       <li><a href="#before-after">시공 과정</a></li>
       <li><a href="#portfolio">시공 사례</a></li>
       <li><a href="#reviews">고객 후기</a></li>
+      <li><a href="#faq">자주 묻는 질문</a></li>
     </ul>
     <a class="call" href="tel:01047224504">010-4722-4504</a>
     <label class="burger" for="mnav" aria-label="메뉴 열기"><span></span></label>
@@ -398,6 +475,7 @@
       <li><a href="#before-after">시공 과정</a></li>
       <li><a href="#portfolio">시공 사례</a></li>
       <li><a href="#reviews">고객 후기</a></li>
+      <li><a href="#faq">자주 묻는 질문</a></li>
       <li><a class="mcall" href="tel:01047224504">010-4722-4504</a></li>
     </ul>
   </nav>
@@ -581,10 +659,74 @@
   </div>
 </section>
 
-<section class="contact">
+<section id="faq" style="background:var(--bg2)">
   <div class="wrap g12">
     <div class="sec-head reveal">
       <div class="sec-num" aria-hidden="true">06</div>
+      <div class="eyebrow">FAQ</div>
+      <h2>자주 묻는 질문</h2>
+      <p class="lead">상담에서 가장 많이 받는 질문을 모았습니다. 더 궁금한 점은 전화로 편하게 문의해 주세요.</p>
+    </div>
+    <div class="sec-body">
+      <div class="faq reveal">
+
+        <details>
+          <summary>상담부터 시공까지 어떻게 진행되나요?<i aria-hidden="true"></i></summary>
+          <div class="a">
+            <p>상담 및 문의 → 현장 방문·실측 → 견적 안내와 일정 협의 → 시공 → 마감 확인·정리 순으로 진행합니다.</p>
+            <p>현장을 직접 보고 실측한 뒤 시공 가능 여부와 작업 방향을 안내드립니다. <b>상담부터 시공까지 대표 목수가 직접 진행합니다.</b></p>
+          </div>
+        </details>
+
+        <details>
+          <summary>견적은 어떻게 산정되나요?<i aria-hidden="true"></i></summary>
+          <div class="a">
+            <p>작업 시간, 자재 비용, 기술 난이도, 현장 환경 네 가지를 기준으로 산정합니다.</p>
+            <p>전화만으로 정확한 금액을 말씀드리기는 어렵습니다. <b>현장을 확인한 뒤 확정 견적을 드립니다.</b> 실측 없이 낮은 금액을 부르고 공사 중에 올리는 방식은 쓰지 않습니다.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>반셀프 인테리어인데 목공 공정만 맡길 수 있나요?<i aria-hidden="true"></i></summary>
+          <div class="a">
+            <p>가능합니다. 실제로 반셀프로 진행하시는 분들의 목공 공정을 많이 맡고 있습니다.</p>
+            <p>목공은 도배·전기·마루 같은 다른 공정과 순서가 맞물립니다. 인테리어가 처음이시면 <b>공정 순서와 준비할 것도 함께 상담해 드립니다.</b></p>
+          </div>
+        </details>
+
+        <details>
+          <summary>시공 중에 추가 비용이 생기나요?<i aria-hidden="true"></i></summary>
+          <div class="a">
+            <p>현장을 실측하고 견적을 확정하기 때문에 시공 중 금액이 바뀌는 일은 거의 없습니다.</p>
+            <p>철거 후에야 드러나는 구조 문제처럼 미리 알 수 없는 상황이 생기면, <b>작업을 진행하기 전에 먼저 알려드리고 협의한 뒤에 처리합니다.</b></p>
+          </div>
+        </details>
+
+        <details>
+          <summary>A/S와 취소·환불 규정은 어떻게 되나요?<i aria-hidden="true"></i></summary>
+          <div class="a">
+            <p><b>시공 완료 후 1개월 동안 A/S를 보증합니다.</b> 문제가 생기면 연락 주시면 확인하고 처리해 드립니다.</p>
+            <p>예약 취소와 환불은 작업 일정 기준 7일 전까지 가능합니다.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>어떤 목공 작업을 하나요? 시공 가능 지역은요?<i aria-hidden="true"></i></summary>
+          <div class="a">
+            <p>가벽, 아치가벽과 라운딩 벽체, 슬라이딩 도어와 히든도어, 무문선·9mm 문선, 우물천장과 천장 목공, 웨인스코팅 몰딩, 템바보드·루버, TV 매립과 제작 벤치까지 실내 목공 전반을 시공합니다.</p>
+            <p>아파트뿐 아니라 상가, 병원, 사무실 같은 상업 공간도 진행합니다. <b>서울·경기·인천 수도권 전 지역</b>에서 시공합니다.</p>
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact">
+  <div class="wrap g12">
+    <div class="sec-head reveal">
+      <div class="sec-num" aria-hidden="true">07</div>
       <div class="eyebrow">Contact</div>
       <h2>상담 문의</h2>
       <div class="who" style="margin-top:28px">
