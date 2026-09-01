@@ -219,18 +219,13 @@
   /* ---------- BEFORE / AFTER ---------- */
   .ba{display:grid;gap:clamp(56px,8vw,110px)}
   .ba-row{display:grid;grid-template-columns:repeat(12,1fr);gap:clamp(14px,2vw,28px);align-items:end}
-  .ba-row .b{grid-column:1/6}
-  .ba-row .a{grid-column:6/13}
-  /* 짝수 행은 좌우를 바꾸지 않고 폭만 바꾼다. 자리를 바꾸면 완성 사진이
-     시공 중 사진보다 먼저 읽히기 때문에 순서가 뒤집혀 보인다. */
-  .ba-row:nth-child(even) .b{grid-column:1/8;order:0}
-  .ba-row:nth-child(even) .a{grid-column:8/13;order:0}
-  .ba-row.tallrow .b{grid-column:1/8}
-  .ba-row.tallrow .a{grid-column:8/13}
+  /* 두 사진은 항상 같은 폭이다. 이 섹션은 시공 중과 완성을 나란히 비교하는
+     것이 목적이라, 한쪽이 크면 크기 자체가 강조로 읽혀 비교를 방해한다. */
+  .ba-row .b{grid-column:1/7}
+  .ba-row .a{grid-column:7/13}
   .ba-item{position:relative;overflow:hidden;background:#241e19}
   .ba-item img{width:100%;aspect-ratio:4/3;object-fit:cover;transition:transform .6s var(--ease),filter .6s var(--ease)}
   .ba-row:hover .ba-item img{transform:scale(1.04);filter:brightness(1.06)}
-  .ba-item.tall img{aspect-ratio:3/4;object-position:center 32%}
   .ba-item .tag{position:absolute;top:10px;left:10px;z-index:3;font-family:var(--display);font-size:.68rem;font-weight:700;
     letter-spacing:.03em;line-height:1;padding:6px 12px;border-radius:999px;background:rgba(18,15,13,.8);backdrop-filter:blur(6px);
     border:1px solid rgba(233,220,205,.2);color:var(--wood-light)}
@@ -360,9 +355,7 @@
     .mobile-menu .mcall{color:var(--wood-light);font-weight:700}
     .hero-sub > div{grid-column:1/-1 !important}
     .hero-sub .cta{margin-top:24px}
-    .ba-row.tallrow .b,.ba-row.tallrow .a,
-    .ba-row .b,.ba-row .a,.ba-row:nth-child(even) .b,.ba-row:nth-child(even) .a{grid-column:1/-1;order:0}
-    .ba-item.tall img{aspect-ratio:4/3}
+    .ba-row .b,.ba-row .a{grid-column:1/-1}
     .ba-cap b,.ba-cap span{grid-column:1/-1}
     .ba-cap span{margin-top:6px}
     .pf .big,.pf .half,.pf .two-third,.pf .third{grid-column:1/-1}
