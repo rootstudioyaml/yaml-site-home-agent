@@ -4,3 +4,11 @@
 env/
 node_modules/
 .DS_Store
+
+# 브라우저 자동화 작업 산출물 (playwright MCP 스냅샷·스크린샷)
+.playwright-mcp/
+*.yml
+place-complete.png
+
+# 사업자등록증 등 공개하면 안 되는 서류
+documents/
